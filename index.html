@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  
+
+  <link href="css/mainpage.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Image and text -->
+<nav class="navbar navbar-inverse navbar-expand-xl navbar-light bg-light navbar-fixed-top" id="menubar">
+  
+      <a class="navbar-brand " href="#">
+        <img src="http://www.freeiconspng.com/uploads/facebook-f-logo-white-background-21.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Facebook
+      </a>
+      
+   
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse show" id="navbarTogglerDemo02" id="navbarResponsive">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="active nav-item">
+            <form class="navbar-form navbar-left">
+                <div class="form-group" style="display:inline;">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="search">
+                    <span class="input-group-addon" id="basic-addon1"><img style="height:1rem" src="C:\Users\i334382\Desktop\IKONS\IKONS\PNG\32\magnifying_glass.png"/></span>
+                  </div>
+                </div>
+            </form>
+          </li>
+
+          <li class="nav navbar-nav nav-item">
+            <button type="button" class="btn btn-secondary navbar-buttons">
+              <a href="#" class="profile-name">Sneha Vaddi
+                <img style="height:1.5rem" src="img/profile_pic.JPG" width="30" height="30" class="d-inline-block align-top" alt="">
+              </a>
+            </button>
+          </li>
+          <li class="nav navbar-nav nav-item">
+            <button type="button" class="btn btn-secondary navbar-buttons"><a href="#"><img style="height:1.2rem" src="img/home.PNG"/></a>Home</button>
+          </li>
+          <li class="nav navbar-nav nav-item">
+            <button type="button" class="btn btn-secondary navbar-buttons"><a href="#"><img style="height:1.2rem" src="img/friend_request.PNG"/></a></button>
+          </li>
+          <li class="nav navbar-nav nav-item">
+            <button type="button" class="btn btn-secondary navbar-buttons"><a href="#"><img style="height:1.2rem" src="img/messenger.PNG"/></a></button>
+          </li>
+          <li class="nav navbar-nav nav-item">
+            <button type="button" class="btn btn-secondary navbar-buttons"><a href="#"><img style="height:1.2rem" src="img/notifications.PNG"/></a></button>
+          </li>
+          <li class="nav navbar-nav nav-item">
+            <button type="button" class="btn btn-secondary navbar-buttons" id="users_toggle"><a class="profile-name nav-controller" id= href="#"><img style="height:1.2rem" src="img/users_online.PNG"/> Users</a></button>
+          </li>
+        </ul>
+    </div>
+</nav>
+
+  <div  style="left: 0;top:0">
+        <header class="masthead"> 
+          
+          <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/26001114_1522051127848699_3226212201707377140_n.jpg?oh=8107bd129a49b041f999105432038c21&oe=5AE85BE7" class="main_pic"/> 
+          </img>
+        </header> 
+      <div class="navbar-nav" id="timeline-navbar"> 
+        <ul id="timeline-bar">
+          <li id="timeline-buttons"><button class="timeline-button">Timeline</button></li>
+          <li id="timeline-buttons"><button class="timeline-button">About</button></li>
+          <li id="timeline-buttons"><button class="timeline-button">Friends</button></li>
+          <li id="timeline-buttons"><button class="timeline-button">Photos</button></li>
+          <li id="timeline-buttons"><button class="timeline-button">More</button></li>
+        </ul>
+      </div>
+
+  </div>
+
+<div class="row">
+  <div class="col-md-10 no-paddin-xs">
+
+    <div class="col-md-4 user-detail no-paddin-xs" id="my-user-detail">
+       <div class="panel panel-default panel-user-detail">
+          <div class="panel-body">
+              <ul class="list-unstyled">
+                  <li><i class="fa fa-suitcase"></i>Works at <a href="#"><span id="my_current_work"></span></a></li>
+                  <li><i class="fa fa-suitcase"></i>Former <span id="my_former_work"></span> at <a href="#"><span id="my_former_company"></span></a></li>
+                  <li><i class="fa fa-graduation-cap"></i>Went to<a href="#"><span id="my_graduation"></span></a></li>
+                  <li><i class="fa fa-home"></i>Lives in <a href="#"><span id="my_current_location"></span></a></li>
+                  <li><i class="fa fa-home"></i>From <a href="#"><span id="my_hometown"></span></a></li>
+                  <li><i class="fa fa-calendar"></i>Born on <a href="#"> <span id="mydob"></span></a></li>
+                  <li><i class="fa fa-rss"></i>Followed by <a href="#">51 People</a></li>
+              </ul>
+          </div>
+          <div class="panel-footer text-center"> <a href="#" class="btn btn-info">Read more...</a></div>
+       </div>
+       <div class="panel panel-default panel-friends">
+          <div class="panel-heading"> <a href="#" class="pull-right">View all&nbsp;<i class="fa fa-share-square-o"></i></a>
+              <h3 class="panel-title">Friends</h3></div>
+          <div class="panel-body text-center">
+              <ul class="friends">
+                  <li>
+                      <a href="#"> <img src="img/friends/pic1.jpg" title="Jhoanath matew" class="img-responsive tip"> </a>
+                  </li>
+                  <li>
+                      <a href="#"> <img src="img/friends/pic2.jpg" title="Martha creawn" class="img-responsive tip"> </a>
+                  </li>
+                  <li>
+                      <a href="#"> <img src="img/friends/pic3.jpg" title="Jeferh smith" class="img-responsive tip"> </a>
+                  </li>
+                  <li>
+                      <a href="#"> <img src="img/friends/pic4.jpg" title="Linda palma" class="img-responsive tip"> </a>
+                  </li>
+                  <li>
+                      <a href="#"> <img src="img/friends/pic5.jpg" title="Lindo polmo" class="img-responsive tip"> </a>
+                  </li>
+                  <li>
+                      <a href="#"> <img src="img/friends/pic6.jpg" title="andrew cartson" class="img-responsive tip"> </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="panel panel-default">
+          <div class="panel-heading"> <a href="#" class="pull-right">View all&nbsp;<i class="fa fa-share-square-o"></i></a>
+              <h3 class="panel-title">Photos</h3></div>
+          <div class="panel-body text-center">
+              <ul class="photos">
+                  <li>
+                      <a href="#"> <img src="img/Photos/pic1.jpg" alt="photo 1" class="img-responsive show-in-modal"> </a>
+                  </li>
+                  <li>
+                      <a href="#"> <img src="img/Photos/pic2.jpg" alt="photo 2" class="img-responsive show-in-modal"> </a>
+                  </li>
+                  <li>
+                      <a href="#"> <img src="img/Photos/pic3.jpg" alt="photo 3" class="img-responsive show-in-modal"> </a>
+                  </li>
+                  <li>
+                      <a href="#"> <img src="img/Photos/pic4.jpg" alt="photo 4" class="img-responsive show-in-modal"> </a>
+                  </li>
+                  <li>
+                      <a href="#"> <img src="img/Photos/pic5.jpg" alt="photo 5" class="img-responsive show-in-modal"> </a>
+                  </li>
+                  <li>
+                      <a href="#"> <img src="img/Photos/pic6.jpg" alt="photo 6" class="img-responsive show-in-modal"> </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="panel panel-default panel-groups">
+          <div class="panel-heading">
+              <h3 class="panel-title">Groups</h3></div>
+          <div class="panel-body">
+              <ul class="list-group">
+                  <li class="list-group-item">
+                      <div class="col-xs-3 col-sm-6 col-md-3"> <img src="img/Likes/likes1.png" alt="Group" class="img-responsive img-circle"> </div>
+                      <div class="col-xs-9 col-sm-6"> <span class="name">Angular JS</span> </div>
+                      <div class="clearfix"></div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class="col-xs-3 col-sm-6 col-md-3"> <img src="img/Likes/likes3.png" alt="Group" class="img-responsive img-circle"> </div>
+                      <div class="col-xs-9 col-sm-6"> <span class="name">Git in action</span> </div>
+                      <div class="clearfix"></div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class="col-xs-3 col-sm-6 col-md-3"> <img src="img/Likes/likes2.png" alt="Group" class="img-responsive img-circle"> </div>
+                      <div class="col-xs-9 col-sm-6"> <span class="name">Node JS</span> </div>
+                      <div class="clearfix"></div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class="col-xs-3 col-sm-6 col-md-3"> <img src="img/Likes/likes4.png" alt="Group" class="img-responsive img-circle"> </div>
+                      <div class="col-xs-9 col-sm-6"> <span class="name">Html 5 live</span> </div>
+                      <div class="clearfix"></div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-6 no-paddin-xs">
+      <div class="panel profile-info">
+          <form>
+              <textarea class="form-control input-lg p-text-area" rows="2" placeholder="Whats in your mind today?"></textarea>
+          </form>
+          <div class="panel-footer">
+              <button type="button" class="btn btn-info pull-right">Post</button>
+              <ul class="nav nav-pills">
+                  <li><a href="#"><i class="fa fa-map-marker"></i></a></li>
+                  <li><a href="#"><i class="fa fa-camera"></i></a></li>
+                  <li><a href="#"><i class=" fa fa-film"></i></a></li>
+                  <li><a href="#"><i class="fa fa-microphone"></i></a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="panel panel-white post panel-shadow">
+            <div class="post-heading">
+                <div class="pull-left image"> <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-1/p80x80/26169056_1749739681765159_4595597393769752238_n.jpg?oh=9c10fcb6094a85197f6ff8024940b61a&oe=5AE80DC0" class="avatar" alt="user profile image"> </div>
+                <div class="pull-left meta">
+                    <div class="title h5"> <a href="#" class="post-user-name" ><span id="post1_from"></span></a> uploaded a photo. </div>
+                    <h6 class="text-muted time"><span id="my_post1_time"></span></h6>
+                 </div>        
+            </div>
+            <div class="pull-left">
+                 <span  id="post1_msg"></span>
+            </div>
+            <div class="pull-left"><p><span id="my_feed1_data"></span></p></div>
+            <div class="post-image"> <img src="https://scontent.xx.fbcdn.net/v/t15.0-10/s720x720/18324231_1458706017535195_545284052853194752_n.jpg?oh=087eff0b67681101bd27035d06e3e897&oe=5AB23F02" class="image show-in-modal" alt="image post"> </div>
+            <div class="post-description">
+                <div class="stats">
+                    <a href="#" class="stat-item"> <i class="fa fa-thumbs-up icon"></i> 228 </a>
+                    <a href="#" class="stat-item"> <i class="fa fa-retweet icon"></i> 128 </a>
+                    <a href="#" class="stat-item"> <i class="fa fa-comments-o icon"></i> 3 </a>
+                </div>
+            </div>
+            <div class="post-footer">
+                <input class="form-control add-comment-input" placeholder="Add a comment..." type="text">
+                <ul class="comments-list">
+                    <li class="comment">
+                        <a class="pull-left" href="#"> <img class="avatar" src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-1/p48x48/25660144_1543865505698773_3078979757853683218_n.jpg?oh=6f834719292696c5baeb38fa6ffbce26&oe=5AE31876" alt="avatar"> </a>
+                        <div class="comment-body">
+                            <div class="comment-heading">
+                                <h4 class="comment-user-name"><a href="#"><span id="post1_comment1_usr1"></span></a></h4>
+                                <h5 class="time"><span id="post1_comment1_usr1_time"></span></h5> </div>
+                            <p><span id="post1_comment1_usr1_comment"></span></p>
+                        </div>
+                    </li>
+                    <li class="comment">
+                        <a class="pull-left" href="#"> <img class="avatar" src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-1/p48x48/17904434_1390440907678900_1488016279709760171_n.jpg?oh=57de6636ef349b3f4f3880c3be232410&oe=5AE35F43" alt="avatar"> </a>
+                        <div class="comment-body">
+                            <div class="comment-heading">
+                                <h4 class="comment-user-name"><a href="#"><span id="post1_comment2_usr2"></span></a></h4>
+                                <h5 class="time"><span id="post1_comment2_usr2_time"></span></h5> </div>
+                            <p><span id="post1_comment2_usr2_comment"></span></p>
+                        </div>
+                    </li>
+                    <li class="comment">
+                        <a class="pull-left" href="#"> <img class="avatar" src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-1/p48x48/12246804_977564945619637_1330821979964592513_n.jpg?oh=ff2b4e55de427d3ac15d0fb7fee9e781&oe=5AE68079" alt="avatar"> </a>
+                        <div class="comment-body">
+                            <div class="comment-heading">
+                                <h4 class="comment-user-name"><a href="#"><span id="post1_comment3_usr3"></span></a></h4>
+                                <h5 class="time"><span id="post1_comment3_usr3_time"></span></h5> </div>
+                            <p><span id="post1_comment3_usr3_comment"></span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel panel-white post panel-shadow">
+                    <div class="post-heading">
+                        <div class="pull-left image"> <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/p80x80/26001114_1522051127848699_3226212201707377140_n.jpg?oh=91cba696c55ecad4b7d712545a0b78ca&oe=5AF6821F" class="avatar" alt="user profile image"> </div>
+                        <div class="pull-left meta">
+                            <div class="title h5"> <a href="#" class="post-user-name"><span id="post2_from"></span></a> updated cover photo. </div>
+                            <h6 class="text-muted time"><span id="my_post2_time"></span></h6> </div>
+                    </div>
+                    <div class="pull-left">
+                      <span id="post2_msg"></span>
+                    </div> 
+
+                    <div class="post-description">
+                        <div class="post-image"> <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/q83/s720x720/17951879_1304407189613095_2527305871045914176_n.jpg?oh=69bbd11e6350fd40dea190ac24a14653&oe=5AB95FF6" class="image show-in-modal" alt="image post"> </div>
+                        <div class="stats">
+                            <a href="#" class="stat-item"> <i class="fa fa-thumbs-up icon"></i>2 </a>
+                            <a href="#" class="stat-item"> <i class="fa fa-retweet icon"></i>12 </a>
+                            <a href="#" class="stat-item"> <i class="fa fa-comments-o icon"></i>3 </a>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                        <input class="form-control add-comment-input" placeholder="Add a comment..." type="text">
+                        <ul class="comments-list">
+                            <li class="comment">
+                                <a class="pull-left" href="#"> <img class="avatar" src="https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.0-1/p48x48/26165749_569281763411308_1672222974084013958_n.jpg?oh=961a0f571f83d1845ffbdf8433ea0035&oe=5AB969A0" alt="avatar"> </a>
+                                <div class="comment-body">
+                                    <div class="comment-heading">
+                                        <h4 class="comment-user-name"><a href="#"><span id="post2_comment1_usr1"></span></a></h4>
+                                        <h5 class="time"><span id="post2_comment1_usr1_time"></span></h5> </div>
+                                    <p><span id="post2_comment1_usr1_comment"></span></p>
+                                </div>
+                            </li>
+                            <li class="comment">
+                              <a class="pull-left" href="#"> <img class="avatar" src="https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.0-1/p48x48/10982361_1394636467531931_5600948142616018544_n.jpg?oh=091b7d349aeb48fe8f39deedb732e141&oe=5AE20BBA" alt="avatar"> </a>
+                              <div class="comment-body">
+                                  <div class="comment-heading">
+                                      <h4 class="comment-user-name"><a href="#"><span id="post2_comment2_usr2"></span></a></h4>
+                                      <h5 class="time"><span id="post2_comment2_usr2_time"></span></h5> </div>
+                                  <p><span id="post2_comment2_usr2_comment"></span></p>
+                              </div>
+                            </li>
+                        </ul>
+                    </div>
+        </div>
+
+        <div class="panel panel-white post panel-shadow">
+                        <div class="post-heading">
+                            <div class="pull-left image"> <img src="https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.0-1/p80x80/26169056_1749739681765159_4595597393769752238_n.jpg?oh=9c10fcb6094a85197f6ff8024940b61a&oe=5AE80DC0" class="avatar" alt="user profile image"> </div>
+                            <div class="pull-left meta">
+                                <div class="title h5"> <a href="#" class="post-user-name"><span id="post3_from"></span></a> </div>
+                                <h6 class="text-muted time"><span id="my_post3_time"></span></h6> </div>
+                        </div>
+                        <div class="pull-left">
+                          <span id="post3_msg"></span>
+                        </div> 
+                        <div class="post-image"><a id="post3_video_link" href="https://www.youtube.com/attribution_link?a=iAvmnJjSuq8&u=%2Fwatch%3Fv%3DkCYHv5WAokY%26feature%3Dshare"></a></div>
+
+                        <div class="post-description">
+                            
+                            <div class="stats">
+                                <a href="#" class="stat-item"> <i class="fa fa-thumbs-up icon"></i>2 </a>
+                                <a href="#" class="stat-item"> <i class="fa fa-retweet icon"></i>12 </a>
+                                <a href="#" class="stat-item"> <i class="fa fa-comments-o icon"></i>3 </a>
+                            </div>
+                        </div>
+                        <div class="post-footer">
+                            <input class="form-control add-comment-input" placeholder="Add a comment..." type="text">
+                            <ul class="comments-list">
+                              <li class="comment">
+                                  <a class="pull-left" href="#"> <img class="avatar" src="https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.0-1/c0.10.48.48/p48x48/26229800_1988893914656172_6887850349534376803_n.jpg?oh=a3ece1008c98adf210d8940c19eaf713&oe=5AE6C48C" alt="avatar"> </a>
+                                  <div class="comment-body">
+                                      <div class="comment-heading">
+                                          <h4 class="comment-user-name"><a href="#"><span id="post3_comment1_usr1"></span></a></h4>
+                                          <h5 class="time"><span id="post3_comment1_usr1_time"></span></h5> </div>
+                                      <p><span id="post3_comment1_usr1_comment"></span></p>
+                                  </div>
+                              </li>
+                              <li class="comment">
+                                <a class="pull-left" href="#"> <img class="avatar" src="https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.0-1/p48x48/26169056_1749739681765159_4595597393769752238_n.jpg?oh=09d90b1272db1a330d33ecdf80a521d3&oe=5AB3E02A" alt="avatar"> </a>
+                                <div class="comment-body">
+                                    <div class="comment-heading">
+                                        <h4 class="comment-user-name"><a href="#"><span id="post3_comment2_usr2"></span></a></h4>
+                                        <h5 class="time"><span id="post3_comment2_usr2_time"></span></h5> </div>
+                                    <p><span id="post3_comment2_usr2_comment"></span></p>
+                                </div>
+                              </li>
+                          </ul>
+                        </div>
+          </div>
+
+          <div class="panel panel-white post-load-more panel-shadow text-center">
+                        <button class="btn btn-default"><i class="fa fa-refresh"></i>Load More...</button>
+          </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="chat-sidebar focus" id="active_users">
+    <div class="list-group text-left">
+        <p class="text-center visible-xs"><a href="#" class="hide-chat btn btn-success btn-sm">Hide</a></p>
+        <p class="text-center chat-title">Online users</p>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-check-circle connected-status"></i> <img src="img/friends/pic1.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">Tejaswini Raju</span> </a>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-times-circle absent-status"></i> <img src="img/friends/pic2.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">Shrikanth Katabattuni</span> </a>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-check-circle connected-status"></i> <img src="img/friends/pic3.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">Rashmita Mohapatra</span> </a>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-check-circle connected-status"></i> <img src="img/friends/pic4.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">Asritha Singiri</span> </a>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-check-circle connected-status"></i> <img src="img/friends/pic5.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">Nitheesh Kumar</span> </a>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-times-circle absent-status"></i> <img src="img/friends/pic6.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">Vijay Sah</span> </a>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-times-circle absent-status"></i> <img src="img/friends/pic7.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">Kiran Kumar</span> </a>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-check-circle connected-status"></i> <img src="img/friends/pic8.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">Abhishek</span> </a>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-check-circle connected-status"></i> <img src="img/friends/pic9.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">HemaLatha</span> </a>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-check-circle connected-status"></i> <img src="img/friends/pic1.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">Tejaswini Raju</span> </a>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-check-circle connected-status"></i> <img src="img/friends/pic2.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">Shrikanth Katabattuni</span> </a>
+        <a href="messages.html" class="list-group-item"> <i class="fa fa-check-circle connected-status"></i> <img src="img/friends/pic3.jpg" class="img-chat img-thumbnail"> <span class="chat-user-name">Rashmita Mohapatra</span> </a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
